@@ -1,0 +1,8 @@
+<launch>
+  <!-- 核心节点配置：仅保留必需参数，无多余符号/空格 -->
+  <node pkg="dynamic_encryption_based_pp_cooperative_control" type="dynamic_encryption_based_pp_cooperative_control_observer_tracking1" name="dynamic_encryption_based_pp_cooperative_control_observer_tracking1" output="screen" required="true"/>
+  <node pkg="dynamic_encryption_based_pp_cooperative_control" type="dynamic_encryption_based_pp_cooperative_control_observer_tracking2" name="dynamic_encryption_based_pp_cooperative_control_observer_tracking2" output="screen" required="true"/>
+  <node pkg="dynamic_encryption_based_pp_cooperative_control" type="dynamic_encryption_based_pp_cooperative_control_observer_tracking3" name="dynamic_encryption_based_pp_cooperative_control_observer_tracking3" output="screen" required="true"/>
+  <node pkg="dynamic_encryption_based_pp_cooperative_control" type="dynamic_encryption_based_pp_cooperative_control_observer_tracking4" name="dynamic_encryption_based_pp_cooperative_control_observer_tracking4" output="screen" required="true"/>
+  <node pkg="dynamic_encryption_based_pp_cooperative_control" type="dynamic_encryption_based_pp_cooperative_control_visual" name="dynamic_encryption_based_pp_cooperative_control_visual" output="screen" required="true"/>
+</launch>

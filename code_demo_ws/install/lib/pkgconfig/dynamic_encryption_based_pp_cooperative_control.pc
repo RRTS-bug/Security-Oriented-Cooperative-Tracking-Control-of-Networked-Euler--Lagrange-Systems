@@ -1,0 +1,8 @@
+prefix=/home/zhl/code_demo_review_build_ws/install
+
+Name: dynamic_encryption_based_pp_cooperative_control
+Description: Description of dynamic_encryption_based_pp_cooperative_control
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ldynamic_encryption_based_pp_cooperative_control
+Requires: geometry_msgs nav_msgs roscpp rospy sensor_msgs std_msgs tf trajectory_msgs visualization_msgs
