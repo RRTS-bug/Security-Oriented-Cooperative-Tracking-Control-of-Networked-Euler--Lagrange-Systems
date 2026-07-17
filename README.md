@@ -1,4 +1,4 @@
-# Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems
+# Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler-Lagrange-Systems
 
 **Notice 1**: *ROS Implementation for the Second Subsection of the Experiment Study on Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems.*
 
@@ -44,7 +44,7 @@ sudo apt install ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-ef
 Source the ROS Noetic environment and the workspace:
 
 ```bash
-cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems/code_demo_ws
+cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler-Lagrange-Systems/code_demo_ws
 touch install/.catkin
 chmod +x install/_setup_util.py
 chmod +x install/lib/dynamic_encryption_based_pp_cooperative_control/*
@@ -61,7 +61,7 @@ ln -sf ../../lib/dynamic_encryption_based_pp_cooperative_control/dynamic_encrypt
 Launch the Gazebo-based physical simulation platform for the two-link robotic manipulator:
 
 ```bash
-cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems/code_demo_ws
+cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler-Lagrange-Systems/code_demo_ws
 source /opt/ros/noetic/setup.bash
 source install/setup.bash
 export CMAKE_PREFIX_PATH=$PWD/install:$CMAKE_PREFIX_PATH
