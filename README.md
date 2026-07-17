@@ -1,24 +1,36 @@
-https://github.com/RRTS-bug/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems.git
-Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems
-Notice 1: ROS Implementation for the Second Subsection of the Simulation Study on Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems
-Notice 2: This repository provides a runnable ROS/Gazebo simulation package for reproducing the submitted manuscript results. The full controller source code will be released after publication. This package contains precompiled ROS nodes and the required launch, configuration, model, and visualization files for review.
-1. Preliminary Preparation
-Before running the code in this subsection, the runtime environment should be configured in advance.
-System Requirements
-Operating System: Ubuntu 20.04
-Robot Operating System: ROS Noetic
-ROS Installation Type: Full Desktop Version
-The detailed installation tutorial for ROS Noetic can be found at:
-https://wiki.ros.org/noetic/Installation/Ubuntu
-After the installation is completed, please check whether Gazebo and RViz can be opened properly.
-2. Running the Tracking Control
-Execute the following commands to run the tracking control code:
+# Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems
 
-2.1 Clone the Repository and Install ROS-Control Related Dependencies
+**Notice 1**: *ROS Implementation for the Second Subsection of the Simulation Study on Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems.*
+**Notice 2**: *This repository provides a runnable ROS/Gazebo simulation package for reproducing the submitted manuscript results. The full controller source code will be released after publication. This package contains precompiled ROS nodes and the required launch, configuration, model, and visualization files for review.*
+
+## 1. Preliminary Preparation
+Before running the code in this subsection, the runtime environment should be configured in advance.
+
+### System Requirements
+
+ -Operating System: Ubuntu 20.04
+ -Robot Operating System: ROS Noetic
+ -ROS Installation Type: Full Desktop Version
+ 
+  The detailed installation tutorial for ROS Noetic can be found at:
+
+  https://wiki.ros.org/noetic/Installation/Ubuntu
+
+  After the installation is completed, please check whether Gazebo and RViz can be opened properly.
+
+# 2. Running the Tracking Control
+
+ Execute the following commands to run the tracking control code:
+
+## 2.1 Clone the Repository and Install ROS-Control Related Dependencies
+
 Clone the code of this repository into the home directory:
-```bash
-git clone https://github.com/RRTS-bug/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems.git
+  
+ ```bash
+ git clone https://github.com/RRTS-bug/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems.git
+ ```
 Install ROS-Control Related Dependencies
+
 ```bash
 sudo apt update
 sudo apt install ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-effort-controllers ros-noetic-gazebo-ros-control
