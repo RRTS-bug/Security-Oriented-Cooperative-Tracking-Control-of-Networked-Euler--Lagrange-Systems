@@ -30,7 +30,7 @@ Before running the code in this subsection, the runtime environment should be co
 Clone the code of this repository into the home directory:
   
  ```bash
- git clone https://github.com/RRTS-bug/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems.git
+ git clone https://github.com/RRTS-bug/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler-Lagrange-Systems.git
  ```
 Install ROS-Control Related Dependencies
 
