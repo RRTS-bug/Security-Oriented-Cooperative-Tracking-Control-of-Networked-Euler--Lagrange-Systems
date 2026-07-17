@@ -10,7 +10,9 @@ Before running the code in this subsection, the runtime environment should be co
 ### System Requirements
 
  -Operating System: Ubuntu 20.04
+ 
  -Robot Operating System: ROS Noetic
+ 
  -ROS Installation Type: Full Desktop Version
  
   The detailed installation tutorial for ROS Noetic can be found at:
