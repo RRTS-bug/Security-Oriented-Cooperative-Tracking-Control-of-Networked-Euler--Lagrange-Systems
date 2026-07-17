@@ -36,30 +36,29 @@ sudo apt update
 sudo apt install ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-effort-controllers ros-noetic-gazebo-ros-control
 ```
 
-2.2 Source the Workspace
+## 2.2 Source the Workspace
+
 Source the ROS Noetic environment and the workspace:
+
 ```bash
 cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems/code_demo_ws
 touch install/.catkin
 chmod +x install/_setup_util.py
-chmod +x install/lib/switching_topology_pp_tracking_control_for_mas/*
-cd install/share/switching_topology_pp_tracking_control_for_mas
-ln -sf ../../lib/switching_topology_pp_tracking_control_for_mas/switching_topology_pp_tracking_control_for_mas_observer switching_topology_pp_tracking_control_for_mas_observer
-
-ln -sf ../../lib/switching_topology_pp_tracking_control_for_mas/switching_topology_pp_tracking_control_for_mas_tracking_els1 switching_topology_pp_tracking_control_for_mas_tracking_els1
-
-ln -sf ../../lib/switching_topology_pp_tracking_control_for_mas/switching_topology_pp_tracking_control_for_mas_tracking_els2 switching_topology_pp_tracking_control_for_mas_tracking_els2
-
-ln -sf ../../lib/switching_topology_pp_tracking_control_for_mas/switching_topology_pp_tracking_control_for_mas_tracking_els3 switching_topology_pp_tracking_control_for_mas_tracking_els3
-
-ln -sf ../../lib/switching_topology_pp_tracking_control_for_mas/switching_topology_pp_tracking_control_for_mas_tracking_els4 switching_topology_pp_tracking_control_for_mas_tracking_els4
-
-ln -sf ../../lib/switching_topology_pp_tracking_control_for_mas/switching_topology_pp_tracking_control_for_mas_tracking_visual switching_topology_pp_tracking_control_for_mas_tracking_visual
+chmod +x install/lib/dynamic_encryption_based_pp_cooperative_control/*
+cd install/share/dynamic_encryption_based_pp_cooperative_control
+ln -sf ../../lib/dynamic_encryption_based_pp_cooperative_control/dynamic_encryption_based_pp_cooperative_control_observer_tracking1
+ln -sf ../../lib/dynamic_encryption_based_pp_cooperative_control/dynamic_encryption_based_pp_cooperative_control_observer_tracking2
+ln -sf ../../lib/dynamic_encryption_based_pp_cooperative_control/dynamic_encryption_based_pp_cooperative_control_observer_tracking3
+ln -sf ../../lib/dynamic_encryption_based_pp_cooperative_control/dynamic_encryption_based_pp_cooperative_control_observer_tracking4
+ln -sf ../../lib/dynamic_encryption_based_pp_cooperative_control/dynamic_encryption_based_pp_cooperative_control_visual
 ```
-2.3 Gazebo-based Physical Simulation Platform for the Two-Link Robotic Manipulator
+
+## 2.3 Gazebo-based Physical Simulation Platform for the Two-Link Robotic Manipulator
+
 Launch the Gazebo-based physical simulation platform for the two-link robotic manipulator:
+
 ```bash
-cd ~/PP_Cooperative-Control-of-Networked-ELS-Under-Switching-Topologies-main/paper_demo_ws
+cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems/code_demo_ws
 source /opt/ros/noetic/setup.bash
 source install/setup.bash
 export CMAKE_PREFIX_PATH=$PWD/install:$CMAKE_PREFIX_PATH
@@ -67,30 +66,18 @@ export ROS_PACKAGE_PATH=$PWD/install/share:$ROS_PACKAGE_PATH
 export LD_LIBRARY_PATH=$PWD/install/lib:$LD_LIBRARY_PATH
 roslaunch two_link_arm_gazebo gazebo.launch 
 ```
-Notice 3: It should be noted that, as long as Gazebo and RViz are successfully launched, the error messages displayed in the terminal do not affect the execution of the simulation and can therefore be ignored, as illustrated in the following figure:
-![image](paper_demo_ws/fig1.png)
-![image](paper_demo_ws/fig2.png)
+Notice 3: It should be noted that, as long as Gazebo and RViz are successfully launched, the error messages displayed in the terminal do not affect the execution of the simulation and can therefore be ignored.
 
-2.4 Run the Observer Launch File
-Open a new terminal and Run the observer launch file:
+## 2.4 Run the Observer_tracking Launch File
+Open a new terminal and Run the observer_tracking launch file:
 ```bash
-cd ~/PP_Cooperative-Control-of-Networked-ELS-Under-Switching-Topologies-main/paper_demo_ws
+cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems/code_demo_ws
 source /opt/ros/noetic/setup.bash
 source install/setup.bash
 export CMAKE_PREFIX_PATH=$PWD/install:$CMAKE_PREFIX_PATH
 export ROS_PACKAGE_PATH=$PWD/install/share:$ROS_PACKAGE_PATH
 export LD_LIBRARY_PATH=$PWD/install/lib:$LD_LIBRARY_PATH
-roslaunch switching_topology_pp_tracking_control_for_mas run.launch 
+roslaunch dynamic_encryption_based_pp_cooperative_control observer_tracking.launch 
 ```
-2.5 Run the Controller Launch File
-Open a new terminal and Run the controller launch file:
-```bash
-cd ~/PP_Cooperative-Control-of-Networked-ELS-Under-Switching-Topologies-main/paper_demo_ws
-source /opt/ros/noetic/setup.bash
-source install/setup.bash
-export CMAKE_PREFIX_PATH=$PWD/install:$CMAKE_PREFIX_PATH
-export ROS_PACKAGE_PATH=$PWD/install/share:$ROS_PACKAGE_PATH
-export LD_LIBRARY_PATH=$PWD/install/lib:$LD_LIBRARY_PATH
-roslaunch switching_topology_pp_tracking_control_for_mas tracking.launch
-```
+
 Notice 4: The control algorithm is executed for 30 s and will be automatically terminated once the 30-second simulation period is completed.
