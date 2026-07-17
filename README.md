@@ -74,7 +74,7 @@ Notice 3: It should be noted that, as long as Gazebo and RViz are successfully l
 ## 2.4 Run the Observer_tracking Launch File
 Open a new terminal and Run the observer_tracking launch file:
 ```bash
-cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler--Lagrange-Systems/code_demo_ws
+cd ~/Security-Oriented-Cooperative-Tracking-Control-of-Networked-Euler-Lagrange-Systems/code_demo_ws
 source /opt/ros/noetic/setup.bash
 source install/setup.bash
 export CMAKE_PREFIX_PATH=$PWD/install:$CMAKE_PREFIX_PATH
